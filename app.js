@@ -29,6 +29,7 @@ function verificarChute() {
     if (chute > numeroSecreto) {
       exibirTextoNaTela("h1", "Número errado!");
       exibirTextoNaTela("p", `Tente outra vez, o número secreto é menor`);
+      tentativas++;
       limparCampo();
     } else {
       exibirTextoNaTela("h1", "Número errado!");

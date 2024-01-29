@@ -14,6 +14,15 @@ function exibirTextoNaTela(tag, texto) {
 exibirTextoNaTela("h1", "Jogo do Numero Secreto");
 exibirTextoNaTela("p", `Escolha um número entre 1 e ${numMaximo}`);
 
+
+
+document.querySelector("input").addEventListener("keypress", function(event) {
+  if (event.key === 'Enter') {
+    verificarChute();
+  }
+});
+
+// ...
 function verificarChute() {
   console.log("botão foi clicado");
   let chute = document.querySelector("input").value;

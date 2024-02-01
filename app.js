@@ -20,11 +20,10 @@ document.querySelector("input").addEventListener("keypress", function (event) {
 
 // ...
 function verificarChute() {
-  console.log("botão foi clicado");
   let chute = document.querySelector("input").value;
   if (chute == numeroSecreto) {
     let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
-    let mensagemTentativas = `Você descobriu o número sercreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`;
+    let mensagemTentativas = `Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`;
     exibirTextoNaTela("h1", "Parabéns você Acertou!");
     exibirTextoNaTela("p", mensagemTentativas);
     document.getElementById("reiniciar").removeAttribute("disabled");
